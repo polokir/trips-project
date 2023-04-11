@@ -14,8 +14,6 @@ export const UserTable = () => {
   const [userUpdate, setUserUpdate] = useState({});
   const [show, setShow] = useState(false);
  
-
-
   useEffect(() => {
     async function fetchUsers() {
       try {

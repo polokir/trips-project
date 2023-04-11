@@ -8,6 +8,7 @@ import { addTrip, deleteTrip, updateTrip } from 'queries/queries';
 import { ModalUpdateTrip } from 'components/Modal/ModalUpdateTrip';
 import { ModalAddTrip } from 'components/Modal/ModalAddTrip';
 
+
 export const TripsTable = () => {
   const [trips, setTrips] = useState([]);
   const [tripUpdate,setTripUpdate] = useState({});
@@ -55,7 +56,6 @@ export const TripsTable = () => {
     deleteTrip(id)
   }
   
-  console.log(trips);
 
 
 

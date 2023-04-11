@@ -44,7 +44,7 @@ export function Header({ role }) {
               </NavLink>
             )}
 
-            {role === 'admin' || role==="dispatcher" && (
+            {(role === 'admin' || role==="dispatcher") && (
             <NavLink
               to="/trips"
               style={{

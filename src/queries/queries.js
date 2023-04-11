@@ -49,3 +49,4 @@ export async function addTrip(newTrip) {
     const tripCollection = collection(db,'trip');
     await addDoc(tripCollection,newTrip);
 }
+

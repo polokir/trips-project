@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { Link,useNavigate } from 'react-router-dom';
 import { setUser } from 'store/slices/user-slice';
 
-
 export const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

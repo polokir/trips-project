@@ -2,9 +2,9 @@ import Header from 'components/Header/Header';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from 'store/slices/user-slice';
-import { Container  } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
-import { getFirestore, collection,getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const Home = () => {
   const user = useSelector(state => state.user);
@@ -46,30 +46,32 @@ const Home = () => {
   return (
     <>
       <Header role={user.role} />
-      <Container>
-        <Table striped bordered hover variant="light">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>departure</th>
-              <th>destination</th>
-              <th>passangers_num</th>
-              <th>number_plate</th>
-            </tr>
-          </thead>
-          <tbody>
-            {trips.map(trip => (
-              <tr key={trip.id}>
-                <td className="text-center">{trip.id}</td>
-                <td className="text-center">{trip.departure}</td>
-                <td className="text-center">{trip.destination}</td>
-                <td className="text-center">{trip.passangers_num}</td>
-                <td className="text-center">{trip.number_plate}</td>
+      {user.role !== 'admin' && user.role !== 'dispatcher' && (
+        <Container>
+          <Table striped bordered hover variant="light">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>departure</th>
+                <th>destination</th>
+                <th>passangers_num</th>
+                <th>number_plate</th>
               </tr>
-            ))}
-          </tbody>
-        </Table>
-      </Container>
+            </thead>
+            <tbody>
+              {trips.map(trip => (
+                <tr key={trip.id}>
+                  <td className="text-center">{trip.id}</td>
+                  <td className="text-center">{trip.departure}</td>
+                  <td className="text-center">{trip.destination}</td>
+                  <td className="text-center">{trip.passangers_num}</td>
+                  <td className="text-center">{trip.number_plate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </Container>
+      )}
     </>
   );
 };

@@ -55,14 +55,14 @@ export const Register = () => {
           </div>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="Enter email" name="email" />
+            <Form.Control maxLength="30" value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="Enter email" name="email" />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Fullname</Form.Label>
-            <Form.Control value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="Enter name" name="name" />
+            <Form.Control maxLength="30" value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="Enter name" name="name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>

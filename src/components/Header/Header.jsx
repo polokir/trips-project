@@ -7,6 +7,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeUser } from 'store/slices/user-slice';
 
+
 export function Header({ role }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -31,7 +32,10 @@ export function Header({ role }) {
       variant="dark"
     >
       <Container className="d-flex align-items-center">
-        <Navbar.Brand href="#home">Trip CRM</Navbar.Brand>
+        <NavLink style={{
+                textDecoration: 'none',
+                color: 'rgba(255, 255, 255, 0.55)',
+              }} to='/home'><Navbar.Brand href="#home">Trip CRM</Navbar.Brand></NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">

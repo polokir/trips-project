@@ -65,9 +65,7 @@ export const Login = () => {
   console.log(user);
   return (
     <div className="container-fluid h-100 w-100 position-fixed top-0 left-0">
-      <p className="h1 text-center">
-        We provide the passwordless authtification
-      </p>
+      
 
       <div className="d-flex justify-content-center align-items-center h-100">
         <Form className="border p-3 mb-5 bg-white rounded" onSubmit={(e)=>handleSubmit(e)}>

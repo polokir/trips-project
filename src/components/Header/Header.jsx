@@ -44,15 +44,17 @@ export function Header({ role }) {
               </NavLink>
             )}
 
+            {role === 'admin' || role==="dispatcher" && (
             <NavLink
               to="/trips"
               style={{
                 textDecoration: 'none',
                 color: 'rgba(255, 255, 255, 0.55)',
-              }}
-            >
+              }}>
               Trips Table
             </NavLink>
+            )}
+              
           </Nav>
           <Nav></Nav>
         </Navbar.Collapse>

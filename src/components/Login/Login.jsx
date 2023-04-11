@@ -111,7 +111,7 @@ export const Login = () => {
             <p className="text-center"> or Sign up</p>
           </Link>
           <Button className="col-12 " variant="secondary" type="submit">
-            Log In
+            Sign In
           </Button>
         </Form>
       </div>

@@ -1,7 +1,6 @@
 import { getAuth,createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { SiGmail, SiFacebook } from 'react-icons/si';
 import { useDispatch } from 'react-redux';
 import { Link,useNavigate } from 'react-router-dom';
 import { setUser } from 'store/slices/user-slice';
@@ -68,18 +67,9 @@ export const Register = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder="Password" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Group className="d-flex justify-content-between">
-              <Button className="px-5 justify-content-center align-items-center">
-                <SiGmail />
-              </Button>
-              <Button className="px-5 justify-content-center align-items-center">
-                <SiFacebook />
-              </Button>
-            </Form.Group>
-          </Form.Group>
+          
           <Link className="text-center" to="/">
-            <p className="text-center"> or Login up</p>
+            <p className="text-center"> or Sign in</p>
           </Link>
           <Button className="col-12 " variant="secondary" type="submit">
             Sign up

@@ -2,8 +2,8 @@ import { getAuth,createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { SiGmail, SiFacebook } from 'react-icons/si';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link,Navigate,useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link,useNavigate } from 'react-router-dom';
 import { setUser } from 'store/slices/user-slice';
 
 

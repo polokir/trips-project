@@ -1,8 +1,5 @@
 {
   "name": "trips-project",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://polozhenets.github.io/trips-project/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "bootstrap": "^5.2.3",

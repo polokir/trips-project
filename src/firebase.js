@@ -13,5 +13,7 @@ const firebaseConfig = {
   };
   
 const app = firebase.initializeApp(firebaseConfig);
+// eslint-disable-next-line
 const db =getFirestore(app);
+
  

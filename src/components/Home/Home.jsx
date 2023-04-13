@@ -46,6 +46,7 @@ const Home = () => {
   return (
     <>
       <Header role={user.role} />
+      <p className="h2 text-center">If you want to test admin part of application here is admin account: email:test@gmail.com password:test123</p>
       {user.role !== 'admin' && user.role !== 'dispatcher' && (
         <Container>
           <Table striped bordered hover variant="light">
